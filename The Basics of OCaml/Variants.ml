@@ -33,3 +33,21 @@ let center s =
     (avg a c, avg b d)
   | Point p -> p
 
+(* Recursive Parametrized Variants *)
+type intList = 
+  | Nil
+  | Cons of int* intList
+
+let rec length = function
+  | Nil -> 0
+  | Cons (_,t) -> 1 + length t
+
+type stringList = 
+  | Nil
+  | Cons of string * stringList
+
+(* Common parametrize Variants - Standard Liibrary implementation of List*)
+
+type 'a myList = 
+  | Nil
+  | Cons of 'a * 'a myList
