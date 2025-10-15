@@ -1,0 +1,6 @@
+(library
+ (name learning_ocaml)
+ (public_name learning_ocaml)
+ (wrapped true)
+)
+
